@@ -1,0 +1,7 @@
+.one {
+    padding: 10px;
+    border: 1px solid lightslategray;
+    margin: 5px 500px 5px 500px;
+    background-image: -moz-repeating-linear-gradient(to right, #51cf48, #fff444);
+  
+}

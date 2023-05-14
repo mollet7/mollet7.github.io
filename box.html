@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="box.css">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2>CSS Box Sizing</h2>
+
+       <p> The CSS box-sizing property allows us to include the padding and border in an element's total width and height.
+        Without the CSS box-sizing Property</p>
+        
+        <p>By default, the width and height of an element is calculated like this: </p>
+        
+        width + padding + border = actual width of an element
+        height + padding + border = actual height of an element
+        
+        <p>This means: When you set the width/height of an element, the element often appears bigger than you have set (because the element's border and padding are added to the element's specified width/height).</p>
+        
+        The following illustration shows two div elements with the same specified width and height:
+    </div>
+    <div class="div1">
+        <p>This box in boxing sizing property</p>
+    </div>
+
+    <div class="div2">
+        <p>This one without box sizing property</p>
+    </div>
+    <p>The two div elements above end up with different sizes in the result (because div2 has a padding specified):</p>
+    <p>The box-sizing property solves this problem.</p>
+    <h2>With the CSS box-sizing Property</h2>
+    <p>The box-sizing property allows us to include the padding and border in an element's total width and height</p>
+    <p>If you set box-sizing: border-box; on an element, padding and border are included in the width and height:</p>
+
+    <div class="box-sizing">
+        <p>THis one box sizing </p>
+    </div>
+
+    <div class="box-sizing2">
+       <p>This also but diffrent padding this has padding 50px</p>
+    </div>
+<p>Since the result of using the box-sizing: border-box; is so much better, many developers want all elements on their pages to work this way.</p>
+<p>The code below ensures that all elements are sized in this more intuitive way. Many browsers already use box-sizing: border-box; for many form elements (but not all - which is why inputs and text areas look different at width: 100%;). </p>
+<p>Applying this to all elements is safe and wise:</p>
+
+<code class="box-sizing">
+    * {
+        box-sizing: border-box;
+    }
+</code>
+
+
+</body>
+</html>

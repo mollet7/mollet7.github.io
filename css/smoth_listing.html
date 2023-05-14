@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .list-item {
+          opacity: 0;
+          transform: translateY(50px);
+          transition: all 0.5s;
+        }
+        .visible {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      </style>
+      
+      <ul>
+        <li class="list-item">Item 1</li>
+        <li class="list-item">Item 2</li>
+        <li class="list-item">Item 3</li>
+      </ul>
+      
+      <script>
+        window.addEventListener("scroll", function() {
+          let items = document.querySelectorAll(".list-item");
+          items.forEach(function(item) {
+            if (isInViewport(item)) {
+              item.classList.add("visible");
+            }
+          });
+        });
+        
+        function isInViewport(el) {
+          let rect = el.getBoundingClientRect();
+          return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+          );
+        }
+      </script>
+</body>
+</html>
+  

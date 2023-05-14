@@ -1,0 +1,88 @@
+.header {
+    display: flex;
+    border: 1px solid red;
+    padding: 5px;
+    position: sticky;
+    top: 0px;
+    z-index: 5;
+    background-color: black;
+    color: white;
+
+}
+
+footer {
+    display: flex;
+    border: 1px solid blue;
+    padding: 5px;
+    position: sticky;
+    bottom: 0px;
+
+}
+
+
+
+.parent {
+    position: relative;
+    height: 800px;
+    padding: 50px 10px;
+    background-color: #81adc8;
+}
+.child-1 {
+    position: sticky;
+	background: #f2f2f2;
+	padding: 10px;
+  border: 1px solid #81adc8;
+} 
+
+.child-2 {
+    position: sticky;
+    top: 10px;
+    background-color: yellow;
+    padding: 10px;
+}
+
+
+
+
+/** 
+
+- Static:   + follow normal flow page document.
+            + Not affected by any style positioned (left, right, top , botton)
+
+- Relative: + Affected by any style positioned
+            + Element can be removed from flow, but the reserved space for element still preserved in the normal flow.
+
+- Absolute  + positined relative to parent element
+            + Element removed from ducument flow
+            + Positioned relative to its closest positioned ancestor.
+
+- fixed:    + Removed from document flow
+            + Positioned relative to the HTML
+            + Affected by any style positioned
+
+- sticky:   + mixed position relative and fixed
+            + Act as relative until certain point (scroll) brick and act as fixed.
+            + you define top/botton to brick
+
+**/
+
+
+.row-images{
+    border: 1px solid yellow;
+    padding-top: 80px;
+    position: relative;
+}
+
+.row-images img {
+    width: 100%;
+}
+.text {
+    
+    position: absolute;
+    width: 50%;
+    bottom: 10%;
+    font-size: 40px;
+    color: white;
+    background-color: rgba(70, 27, 27, 0.651);
+
+}

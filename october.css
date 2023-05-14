@@ -1,0 +1,92 @@
+* {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.85rem;
+
+}
+
+.logo {
+    font-size: 1.3rem;
+}
+.logos-section {
+    display: flex;
+}
+
+nav, 
+.cta-btns,
+.menu-iterms {
+    display: flex;
+    align-items: center;
+}
+
+li {
+    list-style: none;
+}
+
+nav {
+    margin: 0 1.5rem 1.5rem 1.5rem;
+    justify-content: space-between;
+}
+
+.menu-iterms li,
+.cta-btns li {
+    font-size: 0.7rem;
+    margin-right: 1rem;
+    color: hsl(0, 0%, 41%);
+}
+
+.cta-btns li:nth-last-child(1){
+    border: 1px solid gray;
+    padding: 0.2rem 0.7rem;
+    border-radius: 0.3rem;
+}
+
+/* client logo */
+.clients-logos {
+    margin-top: 4rem;
+
+}
+.clients-logos img {
+    width: 5rem;
+    margin-right: 1rem;
+}
+.clients-logos img:nth-child(2){
+    width: 3rem;
+}
+
+/* Main */
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 70vh;
+    align-items: center;
+    align-content: center;
+    margin-left: 8rem;
+}
+main h1 {
+    font-size: 3rem;
+}
+
+main p {
+    font-size: 0.7rem;
+    width: 18rem;
+    color: hsl(0, 0%, 41%);
+    line-height: 0.9rem;
+}
+
+main button {
+    background-color: hsl(0, 0%, 8%);
+    color: #fff;
+    border: none;
+    font-size: 0.7rem;
+    padding: 0.6rem  1rem;
+    border-radius: 0.4rem;
+    margin-top: 1rem;
+}
+
+#text-side {
+    margin-top: 3rem;
+}
+
+.img-side img {
+    width: 40rem;
+}

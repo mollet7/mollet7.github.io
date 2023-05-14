@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="flexbox.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1> <a href="flexbox.html">CSS Flexbox CSS </a> | <a href="flexbox-responsive.html">Flexbox responsive</a> | <a href="gallery-flexbox-responsive.html">Flexbox responsive Image Gallary</a></h1>
+    <h2>CSS Flexbox Layout Module</h2>
+    <div>
+        <p>Before the Flexbox Layout module, there were four layout modes:</p>
+       <ul>
+            <li>Block, for sections in a webpage</li>
+            <li>Inline, for text</li>
+            <li>Table, for two-dimensional table data</li>
+            <li>Positioned, for explicit position of an element</li>
+        </ul>
+        <p>The Flexible Box Layout Module, makes it easier to design flexible responsive layout structure without using float or positioning.</p>
+        <h2>Flexbox Elements</h2>
+        <p>To start using the Flexbox model, you need to first define a <span>flex container.</span> </p>
+    </div>
+
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <h2>Parent Element (Container)</h2>
+    <p>This is a <span>flex container</span> (the blue area) with three flex items:</p>
+    <p>The flex container properties are:</p>
+    <ul>
+        <li>flex-direction</li>
+        <li>flex-wrap</li>
+        <li>flex-flow</li>
+        <li>justify-content</li>
+        <li>align-iterms</li>
+        <li>align-content</li>
+    </ul>
+
+    <h3>flex-direction</h3>
+    <ul>
+        <li>column</li>
+        <li>column-reverse</li>
+        <li>row</li>
+        <li>row-reverse</li>
+
+    </ul>
+
+    <h3>flex-wrap</h3>
+    <ul>
+        <li>wrap</li>
+        <li>nowrap</li>
+    </ul>
+
+    <h3>flex-flow</h3>
+    <p>The flex-flow property is a shorthand property for setting both the <span>flex-direction </span>and <span>flex-wrap properties.</span></p>
+    <ul>
+        <li>column</li>
+        <li>nowrap</li>
+
+    </ul>
+
+    <h3>justify-content</h3> <p>The justify-content property is used to align the <span>flex iterms</span></p>
+    <ul>
+        <li>center</li>
+        <li>flex-start</li>
+        <li>flex-end</li>
+        <li>space-around</li>
+        <li>space-between</li>
+    </ul>
+    
+    <h3>align-iterms</h3>
+    <p>The align-items property is used to align the flex items.</p>
+    <ul>
+        <li>center</li>
+        <li>flex-start</li>
+        <li>flex-end</li>
+        <li>stretch</li>
+        <li>baseline</li>
+    </ul>
+
+    <h3>align-content</h3>
+    <p>The align-content property is used to align the <span>flex lines</span></p>
+    <ul>
+        <li>space-between</li>
+        <li>space-around</li>
+        <li>stretch</li>
+        <li>center</li>
+        <li>flex-start</li>
+        <li>flex-end</li>
+    </ul>
+
+    <h3>Perfect Centering</h3>
+    <p>In the following example we will solve a very common style problem: perfect centering.</p>
+    <p><strong>SOLUTION:</strong> Set both the justify-content and align-items properties to center, and the flex item will be perfectly centered</p>
+
+    <div class="flex-container">
+        <div>1</div>
+    </div>
+
+    <h3>flex-box summary</h3>
+
+    <li>align-content : Modifies the behavior of the flex-wrap property. It is similar to align-items, but instead of aligning flex items, it aligns flex lines</li>
+    <li>align-items : Vertically aligns the flex items when the items do not use all available space on the cross-axis</li>
+    <li>justify-content : Horizontally aligns the flex items when the items do not use all available space on the main-axis</li>
+    <li><img src="images/CSS Flexbox Container.png" width="100%" alt=""></li>
+
+    <h3>CSS flex Items</h3>
+    <h4>Child elements (Items)</h4>
+    <p>The direct child elements of a flex container automatically becomes flexible (flex) items.</p>
+    <img src="images/CSS Flexbox Items.png" width="100%" alt="">
+    <h3>The CSS Flexbox Items Properties</h3>
+    <p>The following table lists all the CSS Flexbox Items properties:</p>
+    <img src="images/CSS s Flexbox Items.png" width="100%" alt="">
+
+</body>
+</html>

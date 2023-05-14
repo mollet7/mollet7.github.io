@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            background-color: yellow;
+            color: black;
+            padding: 2px;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: auto auto;
+        }
+        .side-a {
+            border: 1px dotted green;
+            
+        }
+        .side-b {
+            border: 1px dotted blue;
+        }
+        code {
+            background-color: black;
+            color: azure;
+            font-size: 19px;
+        }
+        .note {
+            background-color: rgba(178, 254, 1, 0.998);
+            color: black;
+            padding: 2%;
+            margin-right: 55%;
+            font-size: 199%;
+            font-weight: bolder;
+            
+        }
+        button {
+            background-color: chocolate;
+            color: black;
+            border-bottom: red;
+            border-radius: 5px;
+            padding: 3%;
+            font-size: 20px;
+
+        }
+    </style>
+</head>
+<body>
+  <h1><span>JSONP</span></h1> 
+  <p>JSONP is a method for sending JSON data <span>without worrying about cross-domain issues</span></p>
+  <p>JSONP does not use the <span>XMLHttpRequest</span> object.</p>
+  <p>JSONP uses the <span>script</span> tag instead.</p> 
+  <h2>JSONP Intro</h2>
+  <p class="note">JSONP stands for JSON with <span>Padding.</span></p>
+
+  <p><span>Why!</span>JSONP</p>
+    <ol>Requesting a file from another domain can <span> can cause problems, due to cross-domain policy.</span></ol>
+    <ol>Requesting an external script from another domain does not have this problem.</ol>
+    <ol>JSONP uses this advantage, and request files using the script tag instead of the XMLHttpRequest object.</ol>
+    <p><span>How!</span></p> 
+
+    <h4 id="result"></h4>
+    <div class="container">
+   <div class="side-a">
+    <h3>Server File</h3>
+    <code>
+        <?php <br>
+        $myJSON = '{ "name":"Maulid", "age":30, "city":"Dar es salaam" }'; <br>
+        
+        echo "myFunc(".$myJSON.");"; <br>
+        ?>   <br>
+    </code>
+    <p>The result returns a call to a function named "myFunc" with the JSON data as a parameter.</p>
+
+   </div> 
+
+   <div class="side-b">
+    <h3>The client Side File</h3>
+    <code>
+        function myFunc(myObj){ <br>
+            document.getElementById("result").innerHTML = myObj.name; <br>
+        } <br>
+        <span>script src="demo_jsonp.php" </span>
+    </code>
+    <script>
+        function myFunc(myObj){
+            document.getElementById("result").innerHTML = myObj.name;
+        }
+    </script>
+    <script src="jsonP.php"></script>
+   </div>
+</div>
+
+<div class="container">
+    <div class="side-a">
+        <h1>Creating a dynamic Script Tag</h1>
+        <p>The script tag should only be created when needed:</p>
+        <h3>Example:</h3>
+        <h2 id="result2"></h2>
+        <button onclick="clickButton()">Click Me!</button>
+        
+        <script>
+            function clickButton(){
+                let s = document.createElement("script");
+                s.src = "jsonP.php";
+                document.body.appendChild(s);
+            }
+            function myFunc(myObj1){
+                document.getElementById("result2").innerHTML = myObj1.name;
+            }
+        </script>
+
+       </div>
+</div>
+
+<div class="container">
+    <div class="side-a">
+        <h1>Dynamic JSONP Result</h1>
+        <p>Make the example dynamic by sending JSON to the php file, and let the php file return a JSON object based on the information it gets.</p>
+    </div>
+   
+    
+    <script>
+        const obj = { table: "countries", limit: 10 };
+        let s = document.createElement("script");
+        s.src = "jsonP_script.php?x=" + JSON.stringify(obj);
+        document.body.appendChild(s);
+
+        function myFunc1(myObj3) {
+            let txt = "";
+            for (let x in myObj3) {
+                txt += myObj3[x].name + "<br/>";
+            }
+            document.getElementById("result3").innerHTML = txt;
+        } 
+    </script>
+     <h3 id="result3"></h3>
+</div>
+</div>
+
+   
+
+
+</body>
+</html>

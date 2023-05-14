@@ -1,0 +1,28 @@
+.div1 {
+    width: 300px;
+    height: 100px;
+    border: 1px solid blue;
+}
+
+.div2 {
+    width: 300px;
+    height: 100px;
+    padding: 50px;
+    border: 1px solid red;
+}
+
+.box-sizing {
+    width: 300px;
+    height: 100px;
+    border: 1px solid blue;
+    box-sizing: border-box;
+}
+
+.box-sizing2 {
+    width: 300px;
+    height: 100px;
+    padding: 50px;
+    border: 1px solid red;
+    box-sizing: border-box;
+    overflow: hidden;
+}

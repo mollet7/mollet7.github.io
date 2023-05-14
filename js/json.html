@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON | PHP </title>
+    <style>
+        html {
+            box-sizing: border-box;
+            margin: 0%;
+        }
+        span {
+            background-color: yellow;
+            color: black;
+        }
+    </style>
+  
+</head>
+<body>
+    <h1>JSON PHP</h1>
+    <p>A common use of JSON is to read data from <span>Web server</span> and display the data in <span>web page</span></p>
+    <p>PHP has some built-in functions to handle JSON.</p>
+    <P>Object in PHP can be coverted into JSON by using the PHP function <span>json_encode():</span></P>
+    <ol>On Server side we define varibale and encode the data to json</ol>
+    <ol>On client side we use <span>AJAX</span> call to request the PHP file from the <span>Server</span></ol>
+    <h3 id="result"></h3>
+    <h3 id="result1"></h3>
+    <h3 id="result2"></h3>
+
+    <h2>Get JSON Data from a PHP Server</h2>
+    <p id="demo"></p>
+    
+    <script>
+        // CLIENT SIDE SCRIPT
+    const req = new XMLHttpRequest();
+    
+    req.onload = function() {
+      const myObj = JSON.parse(this.responseText);
+      document.getElementById("result").innerHTML = myObj.name;
+      document.getElementById("result1").innerHTML = myObj.age;
+      document.getElementById("result2").innerHTML = myObj.city;
+    }
+    req.open("GET", "script-json.php");
+    req.send();
+    </script>
+</body>
+</html>

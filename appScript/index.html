@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mystyle.css">
+    <title>Home | Page </title>
+</head>
+<body>
+    <nav class="nav-iterms">
+            <a href="#"><li>overviews</li></a>
+            <a href="#"><li>AppsScript</li></a>   
+    </nav>
+
+<section>
+    <div class="section-iterms">
+        <header>
+            <h1>Google Apps Script overview</h1>
+        </header>
+
+    <p>
+        Google Apps Script is a rapid application development platform that makes it fast and easy to create business applications that integrate with Google Workspace. You write code in modern JavaScript and have access to built-in libraries for favorite Google Workspace applications like Gmail, Calendar, Drive, and more. There's nothing to install—we give you a code editor right in your browser, and your scripts run on Google's servers.
+    </p>
+    <h1> What can apps script do ?</h1>
+
+    <ul>
+        <li>Add custom menus, dialogs, and sidebars to Google Docs, Sheets, and Forms.</li>
+        <li>Write custom functions and macros for Google Sheets.</li>
+        <li>Publish web apps — either standalone or embedded in Google Sites.</li>
+        <li>Interact with other Google services, including AdSense, Analytics, Calendar, Drive, Gmail, and Maps.</li>
+        <li>Build add-ons and publish them to the Google Workspace Marketplace.</li>
+    </ul>
+
+    <h1> Simple projects</h1>
+
+    <h4>Custom function</h4>
+    <p>
+        You can use Google Apps Script to write a custom function, then use it in Google Sheets just like a built-in function.
+    </p>
+    <p>lets create fucntions that calculates the sale price of discounted items</p>
+    <li>create a new spreed sheet</li>
+    <li>select > menu > Apps script</li>
+    <li>Write the code! </li>
+
+
+    <code>
+                    /**
+            * Calculates the sale price of a value at a given discount.
+            * The sale price is formatted as US dollars.
+            *
+            * @param {number} input The value to discount. <br>
+            * @param {number} discount The discount to apply, such as .5 or 50%. <br>
+            * @return The sale price formatted as USD. <br>
+            * @customfunction <br>
+            */ <br>
+
+            function <b>salePrice</b>(input, discount) { <br>
+            let price = input - (input * discount); <br>
+            let dollarUS = Intl.NumberFormat("en-US", { <br>
+                style: "currency", <br>
+                currency: "USD", <br>
+            }); <br>
+            return dollarUS.format(price); <br>
+            } <br>
+
+    </code>
+
+    <li>Save </li>
+    <li>switch back to your spreadsheet</li>
+    <li>call the function</li>
+
+
+
+</section>
+</body>
+</html>

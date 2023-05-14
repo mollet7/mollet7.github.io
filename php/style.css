@@ -1,0 +1,76 @@
+body {
+    margin: 5%;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .button-container {
+    margin: 3%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+    grid-gap: 7%;
+    justify-items:center;
+    align-items: center;
+    height: 50vh;
+  }
+
+  .button {
+    background-color: #ddd;
+    color: #333;
+    border: none;
+    font-size: 1.5rem;
+    padding: 2rem 3rem;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    border-radius: 3%;
+  }
+
+  .button:hover {
+    background-color: #eee;
+  }
+
+/* Mobile responsiveness */
+@media (max-width: 767px) {
+.button-container {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(80px, 1fr));
+  grid-gap: 5px;
+}
+
+.button {
+  font-size: 1.2rem;
+  padding: 0.8rem 1.6rem;
+}
+}
+
+
+pre {
+    background-color: grey;
+    color: #ffffff;
+    font-size: 16px;
+    width: fit-content;
+    padding: 5px;
+}
+
+.fun{
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+span{
+    color: gold;
+    background-color: rgb(5, 5, 5);
+    padding: 5px;
+    font-weight: bolder;
+    border-radius: 5px;
+}
+
+.note {
+    background-color: khaki;
+    border-radius: 6px;
+    padding: 5px;
+    font-weight: lighter;
+    width: fit-content;
+}

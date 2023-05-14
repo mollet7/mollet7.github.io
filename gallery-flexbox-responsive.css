@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    border: 1px solid red;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header {
+    border: 1px solid blue;
+    text-align: center;
+    padding: 32px;
+    background-image: url(images/back1.jpg);
+}
+
+.row {
+    border: 1px solid yellow;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+/* Create four equal colums that sits next to each other */
+
+.column {
+    border: 1px solid red;
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+
+@media (max-width: 800px) {
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+}

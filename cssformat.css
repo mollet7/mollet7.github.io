@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+
+}
+
+.moja {
+    border: 9px solid red;
+    width: 300px;
+    height: 400px;
+    font-size: 88px;
+    background-color: brown;
+}
+
+
+.moja .moja-a {
+    border: 8px solid rgb(247, 0, 255);
+    width: 300px;
+    height: 80px;
+    font-size: 34px;
+    background-color: black;
+    color: white;
+}
+
+.mbili {
+    border: 2px solid blue;
+    color: red;
+    font-size: 35px;
+}
+
+.tatu {
+    border: 3px dotted yellow;
+    background-color: blueviolet;
+}

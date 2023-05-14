@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="griditem.css">
+    <title>Grid item</title>
+</head>
+<body>
+  <div class="grid-container-1">
+    <div class="grid-item item1">A</div>
+    <div class="grid-item item2">B</div>
+    <div class="grid-item item3">C</div>
+    <div class="grid-item item4">D</div>
+    <div class="grid-item item5">E</div>
+  </div>  
+
+  <h2>Child Elements(Items)</h2>
+  <p>A grid container contain grid items</p>
+<p>To place an item, you can refer to <b>line numbers,</b> or use the keyword<b> "span" </b>to define how many columns the item will span.</p>
+<p>Check in souce code for examples</p>
+
+<h2>The grid-row Property:</h2>
+<p>The <b>grid-row</b> property defines on which row to place an item.</p>
+<p>Item1 will start on row-line 1 and end on row-line 4:</p>
+
+<div class="grid-container-2">
+  <div class="item1b">1</div>
+  <div class="item2b">2</div>
+  <div class="item3b">3</div>  
+  <div class="item4b">4</div>
+  <div class="item5b">5</div>
+  <div class="item6b">6</div>
+  <div class="item7b">7</div>
+  <div class="item8b">8</div>  
+  <div class="item9b">9</div>
+  <div class="item10b">10</div>
+  <div class="item11b">11</div>
+  <div class="item12b">12</div>
+  <div class="item13b">13</div>
+  <div class="item14b">14</div>
+  <div class="item15b">15</div>
+  <div class="item16b">16</div>
+</div>
+
+<h2>The grid-area Property</h2>
+<p>The grid-area property can be used as a shorthand property for the grid-row-start, grid-column-start, grid-row-end and the grid-column-end properties.</p>
+<p><b>The syntax is:</b></p>
+<p>grid-row-start / grid-column-start / grid-row-end / grid-column-end.</p>
+
+<p>Item8 will start on row-line 1 and column-line 2, and end on row-line 5 column-line 6:</p>
+<div class="grid-container-3">
+    <div class="item1c">1</div>
+    <div class="item2c">2</div>
+    <div class="item3c">3</div>  
+    <div class="item4c">4</div>
+    <div class="item5c">5</div>
+    <div class="item6c">6</div>
+    <div class="item7c">7</div>
+    <div class="item8c">8</div>  
+    <div class="item9c">9</div>
+    <div class="item10c">10</div>
+    <div class="item11c">11</div>
+    <div class="item12c">12</div>
+    <div class="item13c">13</div>
+    <div class="item14c">14</div>
+    <div class="item15c">15</div>
+  </div>
+
+  <h2>Naming Grid Items</h2>
+  <p>The <b>grid-area </b> property can also be used to assign names to grid items.</p>
+  <p>Named grid items can be referred to by the <b>grid-template-areas</b> property of the grid container.</p>
+  <p>You can refer to the name when you set up the grid layout, by using the <em>grid-template-areas</em> property on the grid container.</p>
+
+<p>Item1d, is called "myArea" and will take up the place of all five columns:</p>
+
+  <div class="grid-container-4">
+    <div class="item1d">1</div>
+    <div class="item2d">2</div>
+    <div class="item3d">3</div>  
+    <div class="item4d">4</div>
+    <div class="item5d">5</div>
+    <div class="item6d">6</div>
+  </div> 
+
+  <h3>Example</h3>
+
+<h1>The grid-area Property</h1>
+<p>You can use the <em>grid-area</em> property to name grid items.</p>
+<p>You can refer to the name when you set up the grid layout, by using the <em>grid-template-areas</em> property on the grid container.</p>
+<p>This grid layout contains six columns and three rows:</p>
+
+<div class="grid-container-5">
+    <div class="item1e">Header</div>
+    <div class="item2e">Menu</div>
+    <div class="item3e">Main</div>  
+    <div class="item4e">Right</div>
+    <div class="item5e">Footer</div>
+  </div>
+
+ <h3>My Take</h3>
+ <div class="images-holder">
+    <div class="main-image"><img src="images/5-days-marangu-route-banner.jpg" alt=""></div>
+    <div class="image1"><img src="images/4-days-zan-pack-day-img-2.jpg" alt=""></div>
+    <div class="image2"><img src="images/8-days-tanzania-family-safari-banner.jpg" alt=""></div>
+    <div class="image3"><img src="images/7-days-shira-route-banner.jpg" alt=""></div>
+ </div>
+
+
+
+
+</body>
+</html>

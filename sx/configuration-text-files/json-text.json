@@ -1,0 +1,26 @@
+{"":"","":"","":"","":"","":"","":"","":""},
+
+{"property":"value"},
+
+
+{"name":"John", "age":30, "status":"single","isLoad":true,"amount":3000.99},
+
+
+{
+"Employees":[
+    {
+        "name":"John Dore",
+        "department": "Engineering",
+        "age": 32
+
+    },
+
+    {
+        "name":"Samia Ally",
+        "department": "Engineering",
+        "age": 32
+
+    }
+
+]
+}

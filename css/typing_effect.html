@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .typing {
+    font-size: 34px;
+    font-family: monospace;
+    color: red;
+    white-space: pre;
+    overflow: hidden;
+    max-width: 100%;
+    animation: typing 3s steps(30, end), blink-caret .5s step-end infinite;
+    }
+
+    .typing1 {
+        display: block;
+        font-size: 34px;
+        font-family: monospace;
+        color: rgb(0, 0, 0);
+        white-space: pre;
+        overflow: hidden;
+        max-width: 90%;
+        white-space: pre-line; /* preserve line breaks */
+        text-align: center;
+        animation: typing 3s steps(30, end), blink-caret .5s step-end infinite;
+    }
+
+    .typing1 span{
+        color: black;
+        padding: 0.1%;
+    }
+
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+
+    @keyframes blink-caret {
+      from, to {
+        border-color: transparent;
+      }
+      50% {
+        border-color: orange;
+      }
+    }
+   
+  </style>
+</head>
+<body>
+  <div class="typing">
+    Welcome to Property international limited <span class="typing1">Dream to reality</span>
+  </div>
+ 
+
+  <script>
+    var text = document.querySelector(".typing");
+    var text = document.querySelector(".typing1");
+    var str = text.textContent;
+    var len = str.length;
+    var i = 0;
+
+    text.textContent = "";
+
+/*     var typing = setInterval(function () {
+      text.textContent += str[i];
+      i++;
+      if (i >= len) {
+        clearInterval(typing);
+      }
+    }, 100); */
+
+      function type() {
+      text.textContent += str[i];
+      i++;
+      if (i < len) {
+        setTimeout(type, Math.floor(Math.random() * 500) + 100);
+      }
+    }
+    
+    type();
+  </script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+Name    Age     Date
+Maulid  14      23/03/23
+Juma    15      24/04/20
+Hamis   78      23/00/00

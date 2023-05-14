@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="flexbox-responsive.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1> <a href="flexbox.html">CSS Flexbox CSS </a> | <a href="flexbox-responsive.html">Flexbox responsive</a> | <a href="gallery-flexbox-responsive.html">Flexbox responsive Image Gallary</a></h1>
+
+    <p>How we can mix <b>media query </b> with <b>flex box</b></p>
+    <p>For example, if you want to create a two-column layout for most screen sizes, 
+    and a one-column layout for small screen sizes (such as phones and tablets), 
+    you can change the <b>flex-direction</b> from <b>row</b> to <b>column </b>at a specific breakpoint (800px in the example below):</p>
+    <code>
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+        }
+    <br>
+        @media screen and (max-width: 800px){
+            .flex-container {
+                flex-direction: column;
+            }
+        }
+    </code>
+
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+
+
+    </div>
+<h2>Another way using percentage</h2>
+    <p>Another way is to change the percentage of the flex property of the flex items to create different layouts for different screen sizes.
+     Note that we also have to include flex-wrap: wrap; on the flex container for this example to work:</p>
+        <div class="flex-container-percent">
+            <div class="flex-container-percent-right">
+                    1
+            </div>
+
+            <div class="flex-container-percent-left">
+                2
+            </div>
+        </div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<Employees>
+    <Employee>
+        <name> Maulid Hamad </name>
+        <department> IT department </department>
+        <age> 32 </age>
+    </Employee>
+
+    <Employee>
+        <name> Samia Juma </name>
+        <department> Home affairs </department>
+        <age> 25 </age>
+    </Employee>
+<Employees>
+<!-- This is line comment  -->

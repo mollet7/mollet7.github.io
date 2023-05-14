@@ -1,0 +1,25 @@
+---
+Employees:
+- name: Maulid Hamad
+  depatment: IT department
+  age: 32
+  status: single
+
+- name: Samia Athumani
+  depatment: Home Affairs
+  age: 25
+  status: single
+
+Animals:
+- Simba
+- Chui
+- Paka
+
+#this is comments
+
+#data type in YAML
+#purse this value as string
+date: !!str 2022-11-11
+
+#purse this value as float
+number: !!float 1

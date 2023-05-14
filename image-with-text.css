@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+  }
+  
+
+body {
+    background-image: url(images/back1.jpg);
+    max-width: 100%;
+    height: auto;
+    background-size: contain;
+    height: 100%;
+}
+
+html {
+    height: 100%;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+.image-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;  /* make it center */ 
+
+}
+
+.image-container .image-contents {
+    border: 1px solid yellowgreen;
+    position: absolute; /* POsition element absolute to parent */
+    bottom: 2px; /* at the bottom. use top:0 to append it to the top */
+    background-color: rgb(0, 0, 0); /* fallback color */
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1f1;  
+    width: 100%;  /* take full width of div */
+    padding: 10px;  /* some pedding */
+}
+
+
+
+.bg-image {
+    background-image: url(images/20220710_182527.jpg);
+    /* add the blur effect */
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 160%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+  }

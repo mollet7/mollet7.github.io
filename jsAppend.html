@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="addPara()">Add paragrapht</button>
+    <button onclick="addClass()">Add Class to</button>
+    <button onclick="addClassEasy()">Add Class Easy</button>
+    <p></p>
+    <h1 id="mydemo">This is roundom word</h1>
+<style>
+    .demo {
+        color: lightcoral;
+        background-color: black;
+        font-size: 45px;
+        border: 1px solid yellow;
+    }
+
+    .demo2 {
+        background-color: black;
+        color: white;
+        font-size: 50px;
+    }
+
+</style>
+
+<script>
+    function addPara(){
+        let para = document.createElement("P");
+        para.innerHTML="This is added paragraph";
+        document.querySelector("p").appendChild(para);
+    }
+
+    function addClass(){
+        const x = document.createAttribute("class");
+        x.value = "demo";
+        const p = document.getElementsByTagName("p")[1].setAttributeNode(x);
+    }
+
+    function addClassEasy(){
+        document.getElementById("mydemo").setAttribute("class","demo2");
+    }
+</script>
+</body>
+</html>

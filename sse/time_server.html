@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This page will be automatically updated from server!</h1>
+ <h2 id="result"></h2>
+ <script>
+    if(typeof (EventSource) !== "undefined") {
+        var source = new EventSource("demo_see.php");
+        source.onmessage = function(event) {
+            document.getElementById("result").innerHTML += event.data + "<br>";
+        } }
+    else {
+        console.log('Browser not support');
+    }
+        
+
+ </script>   
+</body>
+</html>

@@ -1,0 +1,150 @@
+.grid-container-1 {
+    border: 3px solid red;
+    background-image: url(images/back1.jpg);
+    display: grid;
+
+}
+
+.grid-item {
+    border: 2px dotted black;
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+}
+
+.item1 {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+}
+
+.item2 {
+    grid-column: 3;
+    grid-row: 1 /span 2;
+}
+
+.item5 {
+    grid-column: 1 / 4;
+    grid-row: 3;
+}
+
+.grid-container-2 {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+}
+
+.grid-container-2 > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px; 
+}
+
+.item1b {
+    grid-row: 1/ 4;
+    
+}
+
+.grid-container-3 {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+}
+
+.grid-container-3 > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px; 
+}
+
+.item8c {
+    grid-area: 1/ 2/ 5 / 6;
+    
+}
+
+.grid-container-4 {
+    display: grid;
+    grid-template-areas: 'myArea myArea myArea myArea myArea';
+    gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+  }
+
+  .grid-container-4 > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  } 
+
+  .item1d {
+    grid-area: myArea;
+  }
+
+.grid-container-5 {
+    display: grid;
+    grid-template-areas: 
+    'header header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer footer '; 
+    gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+}
+
+.grid-container-5 > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+
+.item1e {grid-area: header;}
+.item2e {grid-area: menu;}
+.item3e {grid-area: main;}
+.item4e {grid-area: right;}
+.item5e {grid-area: footer;}
+
+.images-holder {
+    border: 1px solid black;
+    display: grid;
+    grid-template-areas: 
+        'main-image main-image main-image'
+        'image1 image2 image3';
+    gap: 5px;
+    padding: 10px;
+}
+
+.images-holder > div {
+    background-color: aquamarine;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 29px;
+}
+
+.main-image {
+    grid-area: main-image;
+    height: 400px;
+}
+.image1 {
+    grid-area: image1;
+    height: 200px;
+}
+.image2 {
+    grid-area: image2;
+    height: 200px;
+}
+.image3 {
+    grid-area: image3;
+    height: 200px;
+}
+
+img {
+    width: 100%;
+    height:auto;
+}

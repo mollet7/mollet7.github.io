@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+header {
+    display: flex;
+    border: 1px solid red;
+}
+/*     SECTION */
+section {
+    display: flex;
+    border: 2px dotted blue;
+}
+
+section .section-iterms{
+    flex-direction: row;
+    flex: 100%;
+
+}
+
+
+
+nav {
+    display: flex;
+    border: 1px solid red;
+}
+
+nav .nav-iterms{
+    flex-direction: row;
+    padding: 10px;
+
+}
+
+
+
+article {
+    display: flex;
+    border: 1px dotted gray;
+}
+
+
+
+aside {
+    display: flex;
+    border: 1px solid yellow;
+}
+
+
+
+footer {
+    display: flex;
+    border: 1px solid grey;
+}

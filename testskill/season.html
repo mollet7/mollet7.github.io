@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if...season</title>
+    <style>
+        p {
+          color: purple;
+          margin: 0.5em 0;
+        }
+  
+        * {
+          box-sizing: border-box;
+        }
+      </style> 
+</head>
+<body>
+    <section class="preview"></section>   
+    
+</body>
+
+<script>
+    let season = 'summer';
+    let response;
+
+    checkWeather('winter');
+function checkWeather(season){
+
+    if (season === 'summer'){
+        response  = season;
+    } else {
+        response = 'We dont know';
+    }
+}
+
+const section = document.querySelector('section');
+
+let para1 = document.createElement('p');
+para1.textContent = response;
+section.appendChild(para1);
+
+const months = ['January','February','March','April','May','June','July','April'];
+let header = document.getElementById('header1');
+let indexItem = months.length;
+
+
+for (const month of months ){
+    console.log(month);
+    let header = document.createElement('h1');
+    header.textContent = month;
+    section.appendChild(header);
+}
+
+const cats = ['Pete','Biggles','Jasmine','Tiger'];
+let myFavoriteCats = 'My cats are called ';
+
+/* for (let cat of cats){
+    myFavoriteCats += `${cat},`
+}
+console.log(myFavoriteCats); */
+
+
+
+for (let i = 0; i < cats.length; i++){
+    if (i === cats.length-1){
+        myFavoriteCats += ` and ${cats[i]}.`
+    } else {
+        myFavoriteCats += `${cats[i]},`
+    }
+    
+}
+console.log(myFavoriteCats);
+let list = document.createElement('h2');
+textContent = list;
+list.appendChild(list);
+
+
+</script>
+</html>

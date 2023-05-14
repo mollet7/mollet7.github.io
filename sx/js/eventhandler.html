@@ -1,0 +1,62 @@
+
+
+<!-- 
+    element.addEventListener(eventType, function(){
+        
+    });
+-->
+
+<!--
+element:- is the HTML element you want to attach the event listener to.
+eventType:- is the type of event you want to listen for (click, keydown, submit).
+function:- is the function that should be executed when the event occurs. --> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="myButton" type="button">click</button>
+    <button id="myBtn">Click me</button>
+
+    <button id="myBtn1">Click me also</button>
+    <p id="demo"></p>
+
+    <label for="mambo">Mambo:</label>
+    <input type="text" name="mambo" id="mambo" value="default">
+
+</body>
+</html>
+<script>
+    var button = document.getElementById("myButton");
+    button.addEventListener("click", function(){
+        alert("Button is clicked!");
+    });   
+    
+    document.getElementById("myBtn").addEventListener("click", function(){
+        alert("Hello Clicked!");
+    });
+    // function with parameter
+
+    let p1 = 5;
+    let p2 = 5;
+    var button = document.getElementById("myBtn1");
+    button.addEventListener("click", function(){
+        myfunction(p1,p2);
+    });
+    function myfunction(a, b){
+        document.getElementById("demo").innerHTML = a * b;
+    }
+
+    var input = document.getElementById("mambo");
+    input.addEventListener("keyup", function(){
+        console.log("User type: " + input.value);
+    });
+
+</script>
+
+
